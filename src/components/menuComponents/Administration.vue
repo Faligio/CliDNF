@@ -3,15 +3,13 @@
     <div class="container">
       <h1>Administration</h1>
       <div class="block"></div>
-      <div class="flexCard">
+      <main class="page-content">
         <div class="card">
           <div class="content">
-            <h2 class="title">Mountain View</h2>
-            <p class="copy">
-              Check out all of these gorgeous mountain trips with beautiful
-              views of, you guessed it, the mountains
-            </p>
-            <button class="btn">View Trips</button>
+            <h2 class="title">Baba</h2>
+            <p class="copy">23 ans</p>
+            <p class="copy">France</p>
+            <p class="copy">Direction DNF</p>
           </div>
         </div>
         <div class="card">
@@ -23,7 +21,7 @@
             <button class="btn">View Trips</button>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   </section>
 </template>
@@ -44,10 +42,24 @@
   box-sizing: border-box;
 }
 
-.flexCard {
-  display: flex;
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
 }
-
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .card {
   position: relative;
   display: flex;
@@ -111,17 +123,13 @@
   transition: transform calc(var(--d) * 2) var(--e);
 }
 .card:nth-child(1):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url(https://i.ibb.co/Z8jpvM5/Baba1.jpg);
+  background-position-x: 35%;
 }
 .card:nth-child(2):before {
   background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
 }
-.card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-}
-.card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-}
+
 .content {
   position: relative;
   display: flex;

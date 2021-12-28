@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Menu from '../views/Menu.vue'
 import Contact from '../views/Contact.vue'
 import Pole from '../views/Pole.vue'
-import Live from '../views/Contact.vue'
+import Live from '../views/Live.vue'
 
 Vue.use(VueRouter)
 

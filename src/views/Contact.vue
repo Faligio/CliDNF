@@ -7,27 +7,54 @@
         <div class="row">
           <div class="six columns">
             <label for="exampleRecipientInput">Name</label>
-            <input class="u-full-width" type="text" />
+            <input v-model="name" class="u-full-width" type="text" />
           </div>
           <div class="six columns">
             <label for="exampleEmailInput">Email</label>
-            <input class="u-full-width" type="email" />
+            <input v-model="email" class="u-full-width" type="email" />
           </div>
         </div>
         <div class="row">
           <label for="exampleMessage">Message</label>
-          <textarea class="u-full-width"></textarea>
+          <textarea v-model="message" class="u-full-width"></textarea>
           <input class="button-primary" type="submit" value="Submit" />
         </div>
       </form>
     </div>
   </section>
-</template>
+</template> 
 
 <script>
 export default {
   name: "Contact",
+  data() {
+    return {name: '', email: '', message: ''}
+
+  },
+   mounted() {
+    if (localStorage.name) {
+      this.name = localStorage.name;
+    }
+    if (localStorage.email) {
+      this.email = localStorage.email;
+    }
+    if (localStorage.message) {
+      this.message = localStorage.message;
+    }
+  },
+  watch: {
+    name(newName) {
+      localStorage.name = newName;
+    },
+    email(newEmail) {
+      localStorage.email = newEmail;
+    },
+    message(newMessage) {
+      localStorage.message = newMessage;
+    }
+  }
 };
+
 </script>
 
 

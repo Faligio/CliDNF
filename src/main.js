@@ -6,6 +6,7 @@ import jQuery from "jquery";
 const $ = jQuery;
 window.$ = $;
 
+
 Vue.config.productionTip = false
 
 new Vue({

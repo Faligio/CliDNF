@@ -8,7 +8,8 @@
                         <li><router-link to="/">Menu</router-link></li>
                         <li><router-link to="/Pole">Pole</router-link></li>
                         <li><router-link to="/Contact">Contact</router-link></li>
-                        <li><router-link to="/Live">Live</router-link></li>
+                        <li style="pointer-events:none"><router-link to="/Live">Live</router-link></li>
+                        <u>Bientôt !</u>
                     </ul>
                 </nav>
             </div>
@@ -42,11 +43,18 @@
 
 <style>
 
+u {
+    position: absolute;
+    color: red;
+    font-size: 8px;
+    text-decoration: none;
+    pointer-events:none
+}
 
 .main_nav {
     position: fixed;
     top: 0px;
-    max-height: 50px;
+    max-height: 70px;
     z-index: 999;
     width: 100%;
     padding-top: 17px;
